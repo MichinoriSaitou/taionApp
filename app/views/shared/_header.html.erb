@@ -1,0 +1,40 @@
+<head>
+ <nav class="navbar navbar-light navbar-expand-md" style="background-color: #a8cee2;">
+        <div class="container-fluid"><a class="navbar-brand" href="/">みんなの体温</a><button data-toggle="collapse" data-target="#navcol-1" class="navbar-toggler"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse show"
+                id="navcol-1">
+                <ul class="nav navbar-nav">
+                <% if current_user %>
+
+                 <li role="presentation" class="nav-item">
+                 <%= link_to current_user.name, mypage_path %>
+                 </li>
+
+                 <li role="presentation" class="nav-item">
+                  <%= link_to 'グループ作成', new_group_path%>
+                  </li>
+                  
+                  <li role="presentation" class="nav-item">
+                  <%= link_to 'ユーザー一覧', usersall_path%>
+                  </li>
+                  
+
+                  <li  role="presentation" class="nav-item">
+                  <%= link_to 'ログアウト', logout_path, :method => :delete, remote: true%>
+                  </li>
+                  
+                  <% else %>
+
+                  <li role="presentation" class="nav-item">
+                    <%= link_to "新規登録", new_user_path %>
+                  </li>
+
+                  <li role="presentation" class="nav-item">
+                    <%= link_to "ログイン", login_path %>
+                  </li>
+                  <% end %>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</head>
