@@ -1,0 +1,47 @@
+<div class="highlight-phone">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="intro">
+                        <h2>体温を知って貰おう。</h2>
+                        <p>Myグループに計測した体温を投稿する簡易デモアプリケーションです。</p>
+                        <% if current_user %>
+                        <%= link_to 'マイページへ', 'mypage_path', class:"btn btn-primary"%>
+                        <% else %>
+                        <%= link_to '新規作成', 'new_user_path', class:"btn btn-primary" %>
+                        <% end %>
+                        </div>
+                </div>
+                        <div class="screen"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="highlight-clean"></div>
+    <div class="features-clean">
+        <div class="container">
+            <div class="intro">
+                <h2 class="text-center">みんなの体温とは</h2>
+                <p class="text-center">作成したグループ内で体温を共有する簡易でもアプリケーションです</p>
+            </div>
+            <div class="row features">
+                <div class="col-sm-6 col-lg-4 item">
+                    <h3 class="name">1.新規登録</h3>
+                    <p class="description">新規登録を行いアプリケーションにログインしよう</p>
+                </div>
+                <div class="col-sm-6 col-lg-4 item">
+                    <h3 class="name">2.グループ作成&ユーザー招待</h3>
+                    <p class="description">グループを作成し、ユーザーリストから招待したいユーザーを選択して招待しよう</p>
+                </div>
+                <div class="col-sm-6 col-lg-4 item">
+                    <h3 class="name">3.体温を投稿&共有</h3>
+                    <p class="description">体温を投稿しグループメンバーに体温を知ってもらいましょう。又、グループメンバーの体温も知りましょう</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <%= render partial: 'shared/footer' %>
+    
