@@ -10,15 +10,7 @@
                  <%= link_to current_user.name, mypage_path %>
                  </li>
 
-                 <li role="presentation" class="nav-item">
-                  <%= link_to 'グループ作成', new_group_path%>
-                  </li>
-                  
-                  <li role="presentation" class="nav-item">
-                  <%= link_to 'ユーザー一覧', usersall_path%>
-                  </li>
-                  
-
+                 
                   <li  role="presentation" class="nav-item">
                   <%= link_to 'ログアウト', logout_path, :method => :delete, remote: true%>
                   </li>

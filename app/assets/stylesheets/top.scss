@@ -1,3 +1,376 @@
 // Place all the styles related to the Top controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.features-clean {
+    color: #313437;
+    background-color: #fff;
+    padding-bottom: 30px;
+  }
+  
+  @media (max-width:767px) {
+    .features-clean {
+      padding-bottom: 10px;
+    }
+  }
+  
+  .features-clean p {
+    color: #7d8285;
+  }
+  
+  .features-clean h2 {
+    font-weight: bold;
+    margin-bottom: 40px;
+    padding-top: 40px;
+    color: inherit;
+  }
+  
+  @media (max-width:767px) {
+    .features-clean h2 {
+      margin-bottom: 25px;
+      padding-top: 25px;
+      font-size: 24px;
+    }
+  }
+  
+  .features-clean .intro {
+    font-size: 16px;
+    max-width: 500px;
+    margin: 0 auto 60px;
+  }
+  
+  @media (max-width:767px) {
+    .features-clean .intro {
+      margin-bottom: 40px;
+    }
+  }
+  
+  .features-clean .item {
+    min-height: 100px;
+    padding-left: 80px;
+    margin-bottom: 40px;
+  }
+  
+  @media (max-width:767px) {
+    .features-clean .item {
+      min-height: 0;
+    }
+  }
+  
+  .features-clean .item .name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: inherit;
+  }
+  
+  .features-clean .item .description {
+    font-size: 15px;
+    margin-bottom: 0;
+  }
+  
+  .features-clean .item .icon {
+    font-size: 40px;
+    color: #1485ee;
+    float: left;
+    margin-left: -65px;
+  }
+  
+  
+  .footer-clean {
+    padding: 50px 0;
+    background-color: #fff;
+    color: #4b4c4d;
+  }
+  
+  .footer-clean h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  .footer-clean ul {
+    padding: 0;
+    list-style: none;
+    line-height: 1.6;
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+  
+  .footer-clean ul a {
+    color: inherit;
+    text-decoration: none;
+    opacity: 0.8;
+  }
+  
+  .footer-clean ul a:hover {
+    opacity: 1;
+  }
+  
+  .footer-clean .item.social {
+    text-align: right;
+  }
+  
+  @media (max-width:767px) {
+    .footer-clean .item {
+      text-align: center;
+      padding-bottom: 20px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .footer-clean .item.social {
+      text-align: center;
+    }
+  }
+  
+  .footer-clean .item.social > a {
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    margin-left: 10px;
+    margin-top: 22px;
+    color: inherit;
+    opacity: 0.75;
+  }
+  
+  .footer-clean .item.social > a:hover {
+    opacity: 0.9;
+  }
+  
+  @media (max-width:991px) {
+    .footer-clean .item.social > a {
+      margin-top: 40px;
+    }
+  }
+  
+  @media (max-width:767px) {
+    .footer-clean .item.social > a {
+      margin-top: 10px;
+    }
+  }
+  
+  .footer-clean .copyright {
+    margin-top: 14px;
+    margin-bottom: 0;
+    font-size: 13px;
+    opacity: 0.6;
+  }
+  
+  @media (max-width:767px) {
+    .features-clean .item {
+      min-height: 0;
+    }
+  }
+  
+  .highlight-clean {
+    color: #313437;
+    background-color: #fff;
+    padding: 50px 0;
+  }
+  
+  .highlight-clean p {
+    color: #7d8285;
+  }
+  
+  .highlight-clean h2 {
+    font-weight: bold;
+    margin-bottom: 25px;
+    line-height: 1.5;
+    padding-top: 0;
+    margin-top: 0;
+    color: inherit;
+  }
+  
+  .highlight-clean .intro {
+    font-size: 16px;
+    max-width: 500px;
+    margin: 0 auto 25px;
+  }
+  
+  .highlight-clean .buttons {
+    text-align: center;
+  }
+  
+  .highlight-clean .buttons .btn {
+    padding: 16px 32px;
+    margin: 6px;
+    border: none;
+    background: none;
+    box-shadow: none;
+    text-shadow: none;
+    opacity: 0.9;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 0.4px;
+    line-height: 1;
+    outline: none;
+    background-color: #ddd;
+  }
+  
+  .highlight-clean .buttons .btn:hover {
+    opacity: 1;
+  }
+  
+  .highlight-clean .buttons .btn:active {
+    transform: translateY(1px);
+  }
+  
+  .highlight-clean .buttons .btn-primary {
+    background-color: #055ada;
+    color: #fff;
+  }
+  
+  .highlight-phone {
+    color: #313437;
+    background-color: #eef4f7;
+    padding: 50px 0 55px;
+    overflow: hidden;
+  }
+  
+  @media (max-width:767px) {
+    .highlight-phone {
+      /*text-align: center;*/
+    }
+  }
+  
+  .highlight-phone p {
+    color: #7d8285;
+  }
+  
+  .highlight-phone h2 {
+    font-weight: bold;
+    margin-bottom: 35px;
+    line-height: 1.5;
+    padding-top: 0;
+    margin-top: 0;
+    color: inherit;
+  }
+  
+  .highlight-phone .intro {
+    font-size: 18px;
+    max-width: 500px;
+    line-height: 1.5;
+  }
+  
+  @media (max-width:767px) {
+    .highlight-phone .intro {
+      max-width: none;
+    }
+  }
+  
+  .highlight-phone .intro p {
+    margin-bottom: 35px;
+  }
+  
+  .highlight-phone .intro .btn {
+    padding: 16px 32px;
+    border: none;
+    background: none;
+    box-shadow: none;
+    text-shadow: none;
+    opacity: 0.9;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 0.4px;
+    line-height: 1;
+  }
+  
+  .highlight-phone .intro .btn:hover {
+    opacity: 1;
+  }
+  
+  .highlight-phone .intro .btn:active {
+    transform: translateY(1px);
+  }
+  
+  .highlight-phone .intro .btn-primary {
+    background-color: #055ada;
+    color: #fff;
+  }
+  
+  .highlight-phone .iphone-mockup {
+    position: relative;
+    max-width: 260px;
+    margin-top: -30px;
+    margin-bottom: -230px;
+    transform: rotate(-15deg);
+  }
+  
+  .highlight-phone .iphone-mockup img.device {
+    width: 100%;
+    height: auto;
+  }
+  
+  .highlight-phone .iphone-mockup .screen {
+    position: absolute;
+    width: 88%;
+    height: 77%;
+    top: 12%;
+    border-radius: 2px;
+    left: 6%;
+    border: 1px solid #444;
+    background-color: #aaa;
+    overflow: hidden;
+    background: url(screen-content-iphone-6.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .highlight-phone .iphone-mockup .screen:before {
+    content: '';
+    background-color: #fff;
+    position: absolute;
+    width: 70%;
+    height: 140%;
+    top: -12%;
+    right: -60%;
+    transform: rotate(-19deg);
+    opacity: 0.2;
+  }
+  
+  /* posts/index ================================ */
+  .posts-index-item {
+    padding: 20px 30px;
+    background-color: white;
+    overflow: hidden;
+    box-shadow: 0 2px 6px #c1ced7;
+  }
+  
+  .post-left img {
+    width: 50px;
+    height: 50px;
+    border-radius: 40%;
+    box-shadow: 0 2px 6px #c1ced7;
+    object-fit: cover;
+  }
+  
+  .post-user-name a {
+    font-weight: 600;
+  }
+  
+  .post-user-name a:hover {
+    color: #3ecdc6;
+  }
+  
+  .post-left {
+    float: left;
+    width: 10%;
+  }
+  
+  .post-right {
+    float: left;
+    width: 90%;
+    padding-left: 25px;
+    text-align: left;
+  }
+

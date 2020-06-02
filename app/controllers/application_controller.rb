@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
+  before_action :current_user
   add_flash_types :success, :info, :warning, :danger
-  
 
   private
 
@@ -11,3 +11,5 @@ class ApplicationController < ActionController::Base
   end
 
 end
+
+

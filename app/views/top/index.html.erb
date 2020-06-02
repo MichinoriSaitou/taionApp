@@ -6,7 +6,7 @@
                         <h2>体温を知って貰おう。</h2>
                         <p>Myグループに計測した体温を投稿する簡易デモアプリケーションです。</p>
                         <% if current_user %>
-                        <%= link_to 'マイページへ', 'mypage_path', class:"btn btn-primary"%>
+                        <%= link_to 'マイページへ', 'mypage', class:"btn btn-primary"%>
                         <% else %>
                         <%= link_to '新規作成', 'new_user_path', class:"btn btn-primary" %>
                         <% end %>
