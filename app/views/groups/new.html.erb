@@ -1,0 +1,14 @@
+<div class="highlight-clean">
+    <div class="container">
+        <div class="intro">
+            <h2 class="text-center">グループを作成</h2>
+            <p class="text-center">・グループ名を記入して下さい</p>
+        </div>
+               <%= form_for @group do |f| %>
+                <%= f.label :name %> 
+                <%= f.text_field :name, class:"form-control"%>
+                <%= f.submit "作成", class:"btn btn-primary" %>  
+              <% end %>     
+        </div>
+    </div>
+</div>

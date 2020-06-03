@@ -1,6 +1,10 @@
 class User < ApplicationRecord
     has_secure_password
 
+    #アソシエーション 
+    has_many :group_user
+    has_many :groups, through: :group_user
+   
     #emailのvalidationオプション
     before_save {self.email= email.downcase}
     VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i

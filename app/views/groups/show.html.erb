@@ -1,0 +1,24 @@
+
+<div class="highlight-clean">
+  <div class="container">
+    <div class="intro">
+      <h2 class="text-center"><%= @group.name %></h2>
+    </div>
+
+<%= Time.now %>
+<div class="main posts-index">
+  <div class="container">
+    <% @group.users.each do |user| %>
+      <div class="posts-index-item">
+        <div class="post-right">
+          <div class="post-user-name">
+            <%= user.name %>さん
+          </div>
+           本日の体温は『<%= 'user.post' %>』です周知願います。
+        </div>
+      </div>
+    <% end %>
+</div>
+</div>
+</div>
+</div>
