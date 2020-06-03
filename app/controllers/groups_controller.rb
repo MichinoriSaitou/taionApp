@@ -5,12 +5,12 @@ class GroupsController < ApplicationController
 
   def create
        @group = Group.new(group_params)
-    if @group.save
+  if   @group.save
        @group.users << current_user
        redirect_to group_path(@group), success: 'グループを作成しました'
-    else
+  else
        render :new
-    end
+  end
   end
 
   def show
@@ -21,6 +21,9 @@ class GroupsController < ApplicationController
   end
 
   def add_user
+    @users = User.where.not(id: current_user.id)
+    @add = GroupUser.create(id: params[:group_id], id: params[:user_id])
+    
   end
 
   private
@@ -28,4 +31,6 @@ class GroupsController < ApplicationController
   def group_params
     params.require(:group).permit(:name)
   end
+  
 end
+

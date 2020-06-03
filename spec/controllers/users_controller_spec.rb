@@ -1,26 +1,38 @@
-require 'rails_helper'
+rrequire 'rails_helper'
 
 RSpec.describe UsersController, type: :controller do
+    describe 'GET #new' do
+     before {get :new}
 
-  describe "GET #new" do
-    it "returns http success" do
-      get :new
-      expect(response).to have_http_status(:success)
+     it 'newテンプレートをレンダリングすること' do
+        expect(response).to render_template :new
+     end
+
+     it  'userオブジェクトがビューに渡される事' do
+        expect(assigns(:user)).to be_a_new User
+     end
+
     end
-  end
 
-  describe "GET #create" do
-    it "returns http success" do
-      get :create
-      expect(response).to have_http_status(:success)
+    describe 'POST #create' do
+     context 'ユーザー情報が渡ってきた場合' do
+        let(:params) do
+            { user: {
+                name: 'user',
+                email: 'xxx@user.jp',
+                password: 'password',
+                password_confirmation: 'password', }}
+        end
+
+        it 'ユーザーが増える事' do
+            expect{post :create, params: params }.to change(User, :count).by(1)
+        end
+
+        it 'マイページにリダイレクトされる事' do
+            expect(post :create, params: params).to redirect_to(mypage_path)
+        end
+
+     end 
+
     end
-  end
-
-  describe "GET #me" do
-    it "returns http success" do
-      get :me
-      expect(response).to have_http_status(:success)
-    end
-  end
-
 end

@@ -1,2 +1,21 @@
-<h1>Groups#add_user</h1>
-<p>Find me in app/views/groups/add_user.html.erb</p>
+<div class="newsletter-subscribe">
+    <div class="container">
+        <div class="intro">
+            <h2 class="text-center">ユーザーリスト</h2>
+            <p class="text-center">招待するユーザーを選んでください</p>
+        </div>
+    <% @users.each do |user| %>
+    <div>
+      <div class="users-index-item">
+        <div class="user-right">
+         <div class="nav nav-pills">
+         <!-- @usersで全てのuserを取得しているのでlink_toでは一意のuserを指定する -->
+          <%= link_to user.name, group_path(@group)  method: :get, data: {confirm: '招待しますか'} %>
+         </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div> 
+
+

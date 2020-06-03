@@ -2,39 +2,42 @@ require 'rails_helper'
 
 RSpec.describe GroupsController, type: :controller do
 
-  describe "GET #new" do
-    it "returns http success" do
-      get :new
-      expect(response).to have_http_status(:success)
-    end
-  end
+    describe 'POST #create'  do
+     context '@groupがsaveされた場合' do
+        let(:params) do
+            { group: {name: 'group'}}
+        end
 
-  describe "GET #create" do
-    it "returns http success" do
-      get :create
-      expect(response).to have_http_status(:success)
-    end
-  end
+       it 'マイページへリダイレクトされる事' do
+        expect(post :create, params: params).to redirect_to(mypage_path)
+       end
 
-  describe "GET #show" do
-    it "returns http success" do
-      get :show
-      expect(response).to have_http_status(:success)
-    end
-  end
+       it 'グループが増える事' do
+        expect(post: create, parmas: params).to change(Group, :count).by(1)
+       end
 
-  describe "GET #mygroup" do
-    it "returns http success" do
-      get :mygroup
-      expect(response).to have_http_status(:success)
+       
+     end
     end
-  end
+    
+    describe 'POST #create'  do
+     context '@groupのsaveに失敗した場合' do
+        let(:group) do
+            ( Group.new(name: ''))
+        end
 
-  describe "GET #add_user" do
-    it "returns http success" do
-      get :add_user
-      expect(response).to have_http_status(:success)
+        it 'falseが返される事' do
+            expect(group.save).to be_falsy
+        end
+
+        it 'newテンプレートにレンダリングされる事' do
+            get :new
+            expect(response).to render_template(:new)
+        end
+
+
+     end
     end
-  end
+
 
 end
