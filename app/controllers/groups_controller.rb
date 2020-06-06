@@ -8,29 +8,34 @@ class GroupsController < ApplicationController
   if   @group.save
        @group.users << current_user
        redirect_to group_path(@group), success: 'グループを作成しました'
-  else
+  elsees
        render :new
   end
   end
 
   def show
     @group = Group.find_by(id: params[:id])
-  end
-
-  def mygroup
+    @post = @group.posts
   end
 
   def add_user
+    @group =  params[:id]
     @users = User.where.not(id: current_user.id)
-    @add = GroupUser.create(id: params[:group_id], id: params[:user_id])
-    
   end
+
+  def mygroup
+    @group = current_user.groups.all
+    @add = GroupUser.create(id: params[:group_id], id: params[:user_id])
+  end
+
 
   private
 
   def group_params
     params.require(:group).permit(:name)
   end
-  
-end
 
+  def post_params
+    params.require(:post).permit(:content, :user_id)
+  end
+end

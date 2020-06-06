@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  dascribe '#validates'  do
+  describe '#validates'  do
     context '名前、メアド、パスワードが正しければ' do
       it '有効である事'  do
         user = User.new ({

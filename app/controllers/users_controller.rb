@@ -17,6 +17,8 @@ class UsersController < ApplicationController
   end
 
   def me
+     @group = current_user.groups
+     @mygroup = Group.find_by(id: params[:id])
   end
 
   private

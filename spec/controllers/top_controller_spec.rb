@@ -7,7 +7,7 @@ RSpec.describe TopController, type: :controller do
     before {get :index}
 
     it "トップページへレンダリングする事" do
-      expect(response).to have_http_status(:index)
+      expect(response).to have_http_status(200)
     end
 
   end

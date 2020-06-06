@@ -14,7 +14,7 @@
           <div class="post-user-name">
             <%= user.name %>さん
           </div>
-           本日の体温は『<%= 'user.post' %>』です周知願います。
+          <div class="text-center">本日の体温は『<%= 'user.post' %>』です周知願います。</div>
         </div>
       </div>
     <% end %>
@@ -24,5 +24,9 @@
  </div>
 
 
-<% link_to 'ユーザーを招待', adduser_path(@group), class:"btn btn-primary" %>
+
+<%= link_to '投稿へ', new_group_post_path(@group), class:"btn btn-primary" %>
+<%= link_to 'ユーザーを追加する', "/adduser/#{@group.id}", class:"btn btn-primary" %>
+
+
 

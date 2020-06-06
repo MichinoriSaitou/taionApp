@@ -4,6 +4,7 @@ class User < ApplicationRecord
     #アソシエーション 
     has_many :group_user
     has_many :groups, through: :group_user
+    has_many :posts
    
     #emailのvalidationオプション
     before_save {self.email= email.downcase}

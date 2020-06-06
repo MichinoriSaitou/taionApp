@@ -10,12 +10,12 @@
         <div class="user-right">
          <div class="nav nav-pills">
          <!-- @usersで全てのuserを取得しているのでlink_toでは一意のuserを指定する -->
-          <%= link_to user.name, group_path(@group)  method: :get, data: {confirm: '招待しますか'} %>
+          <%= link_to user.name, mygroup_path %>
          </div>
         </div>
       </div>
-    <% end %>
-  </div>
-</div> 
+     <% end %>
+   </div>
+ </div>
 
-
+ <%= @group%>

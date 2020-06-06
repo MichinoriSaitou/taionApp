@@ -9,7 +9,7 @@ RSpec.describe GroupsController, type: :controller do
         end
 
        it 'マイページへリダイレクトされる事' do
-        expect(post :create, params: params).to redirect_to(mypage_path)
+        expect(post :create, params: params).to redirect_to(group_path)
        end
 
        it 'グループが増える事' do
