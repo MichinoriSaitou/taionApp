@@ -1,21 +1,25 @@
+
+
 <div class="newsletter-subscribe">
     <div class="container">
         <div class="intro">
             <h2 class="text-center">ユーザーリスト</h2>
             <p class="text-center">招待するユーザーを選んでください</p>
         </div>
-    <% @users.each do |user| %>
-    <div>
-      <div class="users-index-item">
-        <div class="user-right">
-         <div class="nav nav-pills">
-         <!-- @usersで全てのuserを取得しているのでlink_toでは一意のuserを指定する -->
-          <%= link_to user.name, mygroup_path %>
-         </div>
-        </div>
-      </div>
-     <% end %>
+
+      <%= form_for @add, url: addgroup_path do |f| %>
+
+         <%= f.label :group_id, 'グループを選択'%>
+         <%= f.collection_select :group_id, @group, :id, :name,  :prompt => "選んでください" %>
+
+         <%= f.label :user_id, '追加するユーザーを選択'%>
+         <%= f.collection_select :user_id, @users, :id, :name, :prompt => "選んでください" %>
+
+         <%=  f.submit "addguroup", class: "btn btn-primary" %>
+       <% end %>
    </div>
  </div>
 
- <%= @group%>
+
+
+ 
