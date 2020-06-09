@@ -7,7 +7,7 @@ class UsersController < ApplicationController
     @user =  User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
-      redirect_to mypage_path
+      redirect_to mypage_path, success: '新規登録完了'
     else
       redirect_to :back, flash: {
         user: @user,

@@ -6,8 +6,8 @@ Rails.application.routes.draw do
   post 'login', to: 'sessions#create'
   delete 'logout', to: 'sessions#destroy'
   get 'mygroup', to: 'groups#mygroup'
-  get 'adduser/:id', to: 'groups#add_user'
-  post  'addgroup', to: 'groups#add_group'
+  get 'addgroup', to: 'group_users#new'
+  post  'addgroup', to: 'group_users#create'
 
   root 'top#index'
 
@@ -15,11 +15,15 @@ Rails.application.routes.draw do
 
 
   resources :groups do
-    resources :posts, only: %i[new create show]
+    resources :posts, only: %i[new create]
   end
+
+  resources :posts, only: %i[update]
 
 
   end
+
+
   
 
 

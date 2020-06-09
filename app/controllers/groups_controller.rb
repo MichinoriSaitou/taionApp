@@ -3,19 +3,22 @@ class GroupsController < ApplicationController
     @group = Group.new
   end
 
+
   def create
-       @group = Group.new(group_params)
-  if   @group.save
-       @group.users << current_user
-       redirect_to group_path(@group), success: 'グループを作成しました'
+    @group = Group.new(group_params)
+  if  @group.save
+    @group.users << current_user
+    redirect_to group_path(@group), success: 'グループを作成しました'
   else
-       render :new
+    flash[:alert] = 'このグループ名は存在します'
+    render :new 
   end
   end
 
   def show
     @group = Group.find_by(id: params[:id])
-    @post = @group.posts
+    @user = User.find_by(id: params[:id])
+    @post = Post.find_by(id: params[:id])
   end
 
   def add_user
@@ -26,10 +29,11 @@ class GroupsController < ApplicationController
 
   def add_group
     @add = GroupUser.create(id: params[:group_id], id: params[:user_id])
-     if @add.save!
-       redirect_to mypage_path
+     if @add.save
+       redirect_to mypage_path, success: 'ユーザーを追加しました'
      else
-       render 'top/index'
+       flash.now[:alert] = 'このユーザーは追加済みです'
+       render :back
      end
   end
 
@@ -48,4 +52,7 @@ class GroupsController < ApplicationController
   def post_params
     params.require(:post).permit(:content, :user_id)
   end
+
 end
+
+

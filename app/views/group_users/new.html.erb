@@ -1,0 +1,23 @@
+<div class="newsletter-subscribe">
+    <div class="container">
+        <div class="intro">
+            <h2 class="text-center">ユーザーリスト</h2>
+            <p class="text-center">招待するユーザーを選んでください</p>
+        </div>
+
+        <%= form_for @add, :url => {action: "create"} do |f| %>
+
+         <%= f.label :group_id, 'グループを選択'%>
+         <%= f.collection_select :group_id, @group, :id, :name,  :prompt => "選んでください" %>
+
+         <%= f.label :user_id, '追加するユーザーを選択'%>
+         <%= f.collection_select :user_id, @users, :id, :name, :prompt => "選んでください" %>
+
+         <%=  f.submit "addguroup", class: "btn btn-primary" %>
+       <% end %>
+   </div>
+ </div>
+
+
+
+ 

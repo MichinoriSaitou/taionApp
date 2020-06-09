@@ -1,7 +1,10 @@
 
+  <div class="highlight-clean">
   <div class="container">
-      <div class="intro">
-            <h2 class="text-center">新規登録</h2>
+    <div class="intro">
+      <h2 class="text-center">新規登録</h2>
+    </div>
+
  <%= form_for @user do |f| %>
       <div class='form-group' >
        <%= f.label :name, 'ユーザー名' %>
@@ -19,7 +22,7 @@
         <%= f.label :password_confirmation, 'パスワード（確認）' %>
         <%= f.password_field :password_confirmation, class: 'form-control' %>
       </div>
-      <%= f.submit "Create my account", class: "btn btn-primary" %>
+      <%= f.submit "登録する", class: "btn btn-primary" %>
  <% end %>
   
 

@@ -8,7 +8,8 @@ class Group < ApplicationRecord
     has_many :posts
 
     validates :name,
-       presence: true
+       presence: true,
+       uniqueness: true
 
 
 end

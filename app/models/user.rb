@@ -24,5 +24,9 @@ class User < ApplicationRecord
     validates  :password,
        presence: true,
        length: { minimum: 6}
+
+
+
+   # scope :with_posts , -> { joins(:posts).where(: { id:})}
        
 end
