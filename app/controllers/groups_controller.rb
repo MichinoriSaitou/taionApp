@@ -17,8 +17,8 @@ class GroupsController < ApplicationController
 
   def show
     @group = Group.find_by(id: params[:id])
-    @user = User.find_by(id: params[:id])
-    @post = Post.find_by(id: params[:id])
+    user = current_user.id
+    @post = Post.find_by(user_id: user.id)
   end
 
   def add_user
@@ -54,5 +54,3 @@ class GroupsController < ApplicationController
   end
 
 end
-
-

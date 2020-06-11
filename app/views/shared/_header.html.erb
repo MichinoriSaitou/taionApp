@@ -7,24 +7,24 @@
                 <% if current_user %>
 
                  <li role="presentation" class="nav-item">
-                 <%= link_to current_user.name, mypage_path %>
-                 </li>
+                 <%= link_to 'マイグループ', mypage_path %>
                  
-                 <li role="presentation" class="nav-item">
+                 
+                
                   <%= link_to 'グループ作成', new_group_path%>
-                  </li>
+                  
 
-                  <li  role="presentation" class="nav-item">
+                  
                   <%= link_to 'ログアウト', logout_path, :method => :delete, remote: true%>
-                  </li>
+                 
                   
                   <% else %>
 
-                  <li role="presentation" class="nav-item">
+              
                     <%= link_to "新規登録", new_user_path %>
-                  </li>
+                 
 
-                  <li role="presentation" class="nav-item">
+                  
                     <%= link_to "ログイン", login_path %>
                   </li>
                   <% end %>

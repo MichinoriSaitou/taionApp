@@ -8,7 +8,7 @@
 <div class="main posts-index">
   <div class="container">
     <% @group.users.each do |user| %>
-    <% user.posts.each do |post|%>
+     <% user.posts.each do |post|%>
       <div class="posts-index-item">
         <div class="post-right">
           <div class="post-user-name">
@@ -28,9 +28,12 @@
  </div>
 
 
-<% if current_user.posts.nil?%>
+<% if current_user.posts.empty?%>
 <%= link_to '投稿へ', new_group_post_path(@group), class:"btn btn-success" %>
 <% else%>
-<%= link_to '投稿へhe', post_path(@post), class:"btn btn-success" %>
+<%# <%= link_to '投稿へ', edit_group_post_path(@group,  @post), class:"btn btn-success" %> %>
 <% end %>
 
+
+
+<%= @user.id %>

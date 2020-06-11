@@ -1,16 +1,14 @@
       <div class="newsletter-subscribe">
        <div class="container">
          <div class="intro">
-             <h2 class="text-center"><%= current_user.name %>のマイページ</h2>
+             <h2 class="text-center"><%= current_user.name %>さんのマイグループ</h2>
             <p class="text-center">現在参加中のグループ一覧</p>
-
-
         </div>
 　<% @group.each do |group| %>
 　　<div class="list-group">
   　　<div class="list-group-item">
     　　<li><%= link_to group.name, group_path(group) %></li> 
-  　</div>
+  　 </div>
  　 <% end %>
 　</div>
 

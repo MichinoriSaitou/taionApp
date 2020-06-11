@@ -26,7 +26,5 @@ class User < ApplicationRecord
        length: { minimum: 6}
 
 
-
-   # scope :with_posts , -> { joins(:posts).where(: { id:})}
        
 end

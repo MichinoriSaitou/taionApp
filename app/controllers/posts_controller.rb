@@ -14,17 +14,28 @@ class PostsController < ApplicationController
      redirect_to group_path(@group)
   end
 
-  def update
-    @group = params[:group_id]
-    @post = Post.where(id: params[:id])
-    @post.update(content: params[:content])
-    redirect_to group_path(@group)
+  def edit
+     @group = params[:group_id]
+     @post = Post.find_by(user_id: current_user.id)
   end
+
+  def update
+     @group = params[:group_id]
+     @post = Post.find_by(id: params[:id])
+  if @post.update(update_params)
+     redirect_to group_path(@group)
+  end
+
+  end 
 
   private
 
   def post_params
     params.require(:post).permit(:content, :user_id, :group_id)
+  end
+
+  def update_params
+    params.require(:post).permit(:content)
   end
 
 

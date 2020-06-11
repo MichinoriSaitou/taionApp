@@ -15,11 +15,10 @@ Rails.application.routes.draw do
 
 
   resources :groups do
-    resources :posts, only: %i[new create]
+    resources :posts, only: %i[new create edit update]
   end
 
-  resources :posts, only: %i[update]
-
+  
 
   end
 

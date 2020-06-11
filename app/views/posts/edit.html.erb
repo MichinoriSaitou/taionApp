@@ -3,7 +3,7 @@
       <div class="intro">
             <h2 class="text-center">体温を投稿</h2>
 
-         <%= form_for [@group,  @post],  url: group_post_path do |f| %>
+         <%= form_for @post,  :url => {action: "update"} do |f| %>
           <div class='form-group' >      
             <%=  f.number_field  :content, step: "0.1", class: 'form-control' %>
             <%= f.submit "体温投稿", class: "btn btn-primary"%>
