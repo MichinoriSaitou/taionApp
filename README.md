@@ -1,7 +1,7 @@
 # README
 README
 
-**taionapp**
+#**taionapp**
 
 taionappはグループを作成しグループ内で体温を共有する投稿デモアプリです。
 
@@ -10,7 +10,7 @@ taionappはグループを作成しグループ内で体温を共有する投稿
 
 ログイン画面からテストユーザーとしてログインが可能です。
 
-**機能一覧など**
+#**機能一覧など**
 
 ユーザー登録機能
 
@@ -28,17 +28,27 @@ taionappはグループを作成しグループ内で体温を共有する投稿
 
 レスポンシブデザイン(bootstrap)
 
-**使用技術**
+#**使用技術**
 
 Ruby 2.5.3
+
 Ruby on Rails 5.2.4.3
+
 MySQL 
+
 bootstrap
+
 Docker
+
 docker-compose
+
 Rspec
+
 AWS(デプロイ)
+
 テスト
+
 Rspec
+
 controllerテスト
 
