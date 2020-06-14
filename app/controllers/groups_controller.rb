@@ -22,21 +22,6 @@ class GroupsController < ApplicationController
     @post = Post.find_by(user_id: user)
   end
 
-  def add_user
-    @group = current_user.groups.all
-    @users = User.where.not(id: current_user.id)
-    @add = GroupUser.new(id: params[:group_id], id: params[:user_id])
-  end
-
-  def add_group
-    @add = GroupUser.new(id: params[:group_id], id: params[:user_id])
-     if @add.save
-       redirect_to mypage_path, success: 'ユーザーを追加しました'
-     else
-       flash[:danger] = "このユーザーは追加済みです"
-       render :add_user
-     end
-  end
 
 
   private
