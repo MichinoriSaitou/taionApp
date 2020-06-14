@@ -9,6 +9,7 @@ taionappはグループを作成しグループ内で体温を共有する投稿
  ログイン画面からテストユーザーとしてログインが可能です。
 
 機能一覧など
+
 ユーザー登録機能
 ログイン機能(session)
 ログアウト機能(ajax)
@@ -19,6 +20,7 @@ taionappはグループを作成しグループ内で体温を共有する投稿
 レスポンシブデザイン(bootstrap)
 
 使用技術
+
 Ruby 2.5.3
 Ruby on Rails 5.2.4.3
 MySQL 
@@ -26,17 +28,7 @@ bootstrap
 Docker
 docker-compose
 Rspec
-AWS
-ECS
-ECR
-EC2
-RDS(MySQL)
-S3
-VPC
-Route53
-ACM
-ALB
-Cloudwatch
+AWS(デプロイ)
 テスト
 Rspec
 controllerテスト
