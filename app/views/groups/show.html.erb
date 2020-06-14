@@ -3,6 +3,11 @@
   <div class="container">
     <div class="intro">
       <h2 class="text-center"><%= @group.name %></h2>
+      <div class="text-center">
+        <% if current_user.posts.blank? %>
+           <%= link_to '体温を投稿しましょう', new_group_post_path(@group), class:"btn btn-success" %>
+        <% end %>
+      </div >  
     </div>
 
 <div class="main posts-index">
@@ -12,11 +17,15 @@
       <div class="posts-index-item">
         <div class="post-right">
           <div class="post-user-name">
-            <%= user.name %>さん
-             <%= link_to '投稿へ', new_group_post_path(@group), class:"btn btn-success" %>
+            <%= user.name %>さん   
           </div>
-          <div class="text-center"><h3><%= post.content %>度</h3></div>
-          <div class="text-right"><%= post.created_at.strftime('%Y/%m/%d %H:%M') %></div>
+             <div class="text-center"><h3><%= post.content %>度</h3></div>
+             <div class="text-right">
+              <% if current_user.id == user.id%>
+                 <%= link_to '体温投稿', edit_group_post_path(@group,  @post), class:"btn btn-success" %>
+              <% end %> 
+             <%= post.created_at.strftime('%Y/%m/%d %H:%M') %>
+             </div>
         </div>
       </div>
     <% end %>
@@ -28,12 +37,4 @@
  </div>
 
 
-<% if current_user.posts.empty?%>
-<%= link_to '投稿へ', new_group_post_path(@group), class:"btn btn-success" %>
-<% else%>
-<%# <%= link_to '投稿へ', edit_group_post_path(@group,  @post), class:"btn btn-success" %> %>
-<% end %>
 
-
-
-<%= @user.id %>

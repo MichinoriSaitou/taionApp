@@ -1,24 +1,43 @@
 # README
+README
+taionapp
+taionappはグループを作成しグループ内で体温を共有する投稿デモアプリです。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ポートフォリオ URL
 
-Things you may want to cover:
 
-* Ruby version
+ ログイン画面からテストユーザーとしてログインが可能です。
 
-* System dependencies
+機能一覧など
+ユーザー登録機能
+ログイン機能(session)
+ログアウト機能(ajax)
+グループ作成機能
+グループとユーザーの関連付け(多対多によるユーザー追加機能)
+投稿機能
+投稿更新機能
+レスポンシブデザイン(bootstrap)
 
-* Configuration
+使用技術
+Ruby 2.5.3
+Ruby on Rails 5.2.4.3
+MySQL 
+bootstrap
+Docker
+docker-compose
+Rspec
+AWS
+ECS
+ECR
+EC2
+RDS(MySQL)
+S3
+VPC
+Route53
+ACM
+ALB
+Cloudwatch
+テスト
+Rspec
+controllerテスト
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

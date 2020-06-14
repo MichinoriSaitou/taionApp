@@ -11,6 +11,7 @@ RSpec.describe UsersController, type: :controller do
      it  'userオブジェクトがビューに渡される事' do
         expect(assigns(:user)).to be_a_new User
      end
+     
 
     end
 
@@ -21,7 +22,7 @@ RSpec.describe UsersController, type: :controller do
                 name: 'user',
                 email: 'xxx@user.jp',
                 password: 'password',
-                password_confirmation: 'password', }}
+                password_confirmation: 'password'}}
         end
 
         it 'ユーザーが増える事' do

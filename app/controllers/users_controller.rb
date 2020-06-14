@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+
   def new
     @user = User.new(flash[:user])
   end
@@ -20,6 +21,9 @@ class UsersController < ApplicationController
      @group = current_user.groups
      @mygroup = Group.find_by(id: params[:id])
   end
+
+
+  
 
   private
 

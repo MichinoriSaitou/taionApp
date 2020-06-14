@@ -10,8 +10,9 @@ class GroupUsersController < ApplicationController
   def create
      @add = GroupUser.create(groupuser_params)
   if @add.save
-     redirect_to mypage_path
+     redirect_to mypage_path,  success: 'ユーザーを追加しました'
   else
+     flash[:alert] = 'このユーザーは追加されています'
      render :new
   end
 
@@ -30,6 +31,7 @@ class GroupUsersController < ApplicationController
   def groupuser_params
    params.require(:group_user).permit(:user_id, :group_id)
   end
+
 
 
 end
