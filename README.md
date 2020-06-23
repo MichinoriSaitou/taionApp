@@ -9,7 +9,7 @@ taionappはグループを作成しグループ内で体温を共有する投稿
 
 
 **ポートフォリオ URL**
-
+ http://www.taionapp.com
 
 ログイン画面からテストユーザーとしてログインが可能です。
 
@@ -53,9 +53,9 @@ docker-compose
 
 Rspec
 
-AWS(デプロイ)
+Heroku（デプロイ)
 
-テスト
+#テスト
 
 Rspec
 
